@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Библиотека</title>
+</head>
+<body>
+    <h1>Добро пожаловать, {{ reader.first_name }} {{ reader.last_name }}</h1>
+    <h2>Действия:</h2>
+    <ul>
+        <li><a href="{% url 'home' %}">Выйти</a></li>
+        <li><a href="{% url 'return_detail' reader_id=reader.id %}">Вернуть книгу</a></li>
+        <li><a href="{% url 'book_detail' reader_id=reader.id %}">Список доступных книг</a></li>
+    </ul>
+
+</body>
+</html>
